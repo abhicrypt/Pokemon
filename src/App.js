@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Navbar/Navbar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import TaskA from "./components/TaskA/TaskA";
+import TaskB from "./TaskB/TaskB";
+import TaskC from "./TaskC/TaskC";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <Navbar />
+          <br/>
+          <br/>
+          <Switch>
+            <Route path="/TaskA" component={TaskA} />
+            <Route path="/TaskC" component={TaskC} />
+            <Route path="/TaskB" component={TaskB} /> 
+          </Switch>
+        </Router>
+      </React.Fragment>
+    );
+  }
 }
-
 export default App;
