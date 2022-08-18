@@ -37,7 +37,7 @@ function TaskB() {
                         <h5>Type</h5>
                         <h5>#001</h5>
                         
-                        <div><h4 bg-primary>Grass</h4></div>
+                        <div><h4 bg-primary >Grass</h4></div>
                       </div>
                       <div className="col-sm">
                         <br/>
